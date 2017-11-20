@@ -23,7 +23,14 @@ public class Solution {
     }
 
     public static void sort(String[] array) {
-        //напишите тут ваш код
+        String max = null;
+        for (int i = 1; i < array.length; ) {
+            if (isGreaterThan(array[i-1], array[i]))
+            {max = array[i];
+                array[i] = array[i-1];
+                array[i-1] = max;
+                if (i != 1) i--;}
+            else i++;}
     }
 
     //Метод для сравнения строк: 'а' больше чем 'b'
