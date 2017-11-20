@@ -1,0 +1,35 @@
+package com.javarush.task.task08.task0826;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+/* 
+Пять победителей
+*/
+
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int[] array = new int[20];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = Integer.parseInt(reader.readLine());
+        }
+
+        sort(array);
+
+        System.out.println(array[0]);
+        System.out.println(array[1]);
+        System.out.println(array[2]);
+        System.out.println(array[3]);
+        System.out.println(array[4]);
+    }
+
+    public static void sort(int[] array) {
+        for (int i = 0; i < array.length; i++) { //пробегаемся по массиву
+            for (int k = 0; k < array.length - 1; k++) { // берем конкретный элемент
+                if (array[k] < array[k + 1]) { //сравниваем с элементом справа
+                    int temp = array[k]; // если он больше, то меняем местами
+                    array[k] = array[k + 1];
+                    array[k + 1] = temp;  } } }
+    }
+}
