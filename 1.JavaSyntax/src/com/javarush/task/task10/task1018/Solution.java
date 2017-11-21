@@ -28,6 +28,7 @@ public class Solution {
             String name = reader.readLine();
             solution.map.put(index, name);
         }
+        
 
         for (Map.Entry<Integer, String> pair : solution.map.entrySet()) {
             index = pair.getKey();
