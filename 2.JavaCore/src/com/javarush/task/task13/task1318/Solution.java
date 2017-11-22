@@ -21,4 +21,5 @@ public class Solution {
         inStream.close();
         reader.close();
     }
+
 }
