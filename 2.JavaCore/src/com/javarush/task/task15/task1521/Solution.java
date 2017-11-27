@@ -28,4 +28,3 @@ public class Solution {
         new Tree().info(new BigDecimal("4").toString());
     }
 }
-
